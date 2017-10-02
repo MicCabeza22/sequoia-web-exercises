@@ -2,7 +2,53 @@
 this file is named "style.css" and is in a directory named "css"
 */
 
-.fancy-header {
+h1, h2, h3, h4, h5, h6 {
     color: purple;
     text-decoration: underline;
+}
+
+h1.center {
+    text-align: center;
+}
+
+body {
+    font-family: Helvetica;
+    background-color: silver;
+    background-image: url("../images/tile_background.jpg");
+    background-size: 34%;
+}
+
+ul {
+    list-style: square;
+}
+
+table{
+    padding: 25px;
+    font-size: large;
+}
+
+td {
+    padding: 12px;
+    font-size: small;
+}
+
+tr{
+    padding: 19px;
+    font-size: medium;
+}
+
+a:link {
+    color: darkgreen;
+}
+
+a:visited {
+    color: slateblue;
+}
+
+a:hover {
+    color: lightgreen;
+}
+
+a:active {
+    color: darkgoldenrod;
 }
