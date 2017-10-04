@@ -1,18 +1,19 @@
+/* Credit for part of this code goes to jreich5 on GitHub */
+
 .container {
     margin: 0 auto;
     width: 80%;
-    max-width: 1920px;
-    max-height: 1080px;
+    max-width: 1200px;
+    min-height: 100vh;
 }
 
 .row {
     width: 100%;
-    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .row1 {
     width: 100%;
-    padding: 10px;
     margin-top: 20px;
 }
 
@@ -22,32 +23,35 @@
     clear: both;
 }
 
-.column {
+.two-thirds, .one-half, .one-third, .one-fourth, .one-sixth, .one-eighth {
+    width: 100%;
     float: left;
     padding: 10px;
-    background-color: #d3d3d3;
     box-sizing: border-box;
-    border: 1px solid #000;
 }
 
-.column.one-half {
-    width: 50%;
-}
+@media screen and (min-width: 768px) {
+    .two-thirds{
+        width: calc(2 * (100% / 3));
+    }
 
-.column.one-third {
-    width: 33.3334%;
-}
+    .one-half {
+        width: 50%;
+    }
 
-.column.one-fourth {
-    width: 25%;
-}
+    .one-third {
+        width: calc(100% / 3);
+    }
 
-.column.one-eighth {
-    width: 12.5%;
-}
+    .one-fourth {
+        width: 25%;
+    }
 
-@media screen and (max-width: 768px) {
-    .column.one-half, .column.one-third, .column.one-fourth, .column.one-eighth {
-        width: 100%;
+    .one-sixth {
+        calc(100% / 6);
+    }
+
+    .one-eighth {
+        width: 12.5%;
     }
 }
