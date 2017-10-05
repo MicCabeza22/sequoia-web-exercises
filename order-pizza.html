@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <title>Pizza World</title>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <!-- custom styles go here -->
+    </head>
+    <body>
+    <!-- This section sets up the navigation bar at the top of the current screen. -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Pizza World</a>
+            </div>
+
+            <!-- This section sets up clickable elements inside of the nav bar. -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collspase-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Order Online <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">Menu</a></li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Zip code">
+                    </div>
+                    <button type="submit" class="btn btn-default">Search stores near you!</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- This section sets up a jumbotron, or banner, for the page to display -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Welcome to Pizza World!</h1>
+        </div>
+    </div>
+    
+    <!-- This section sets up nav tabs to build a pizza. -->
+    <div>
+        <h2>Build your own pizza!</h2>
+        <hr>
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#"><span class="badge">1</span> Size and Crust</a></li>
+            <li role="presentation"><a href="#"><span class="badge">2</span> Cheese and Sauce</a></li>
+            <li role="presentation"><a href="#"><span class="badge">3</span> Toppings</a></li>
+        </ul>
+        <!-- This section sets up panels containing customizable pizza size and crust selections. -->
+        <div class="panel panel-default">
+            <div class="panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Choose size and crust</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Hand-tossed</h3>
+                        </div>
+                        <div class="panel-body">
+                            Garlic-seasoned crust with a rich, buttery taste.
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-info">
+                                <label>
+                                    <input type="radio" name="crust" id="tossed-sm" value="small"> Small (10")
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-info">
+                                <label>
+                                    <input type="radio" name="crust" id="tossed-md" value="medium"> Medium (12")
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Crunchy thin crust</h3>
+                        </div>
+                        <div class="panel-body">
+                            Thin enough for the optimum crispy to crunchy ratio.
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-info">
+                                <label>
+                                    <input type="radio" name="crust" id="crunchy-md" value="medium"> Medium
+                                    (12")
+                                </label>
+                            </li>
+                            <li class="list-group-item list-group-item-info">
+                                <label>
+                                    <input type="radio" name="crust" id="crunchy-lg" value="large"> Large (14")
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- This section sets up options for selecting cheese and sauce. -->
+    <div class="panel panel-default">
+        <div class="panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">Choose cheese & sauce</h3>
+            </div>
+            <div class="panel-body">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Cheese?</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                                Light <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Light</a></li>
+                                <li><a href="#">Normal</a></li>
+                                <li><a href="#">Extra</a></li>
+                                <li><a href="#">Double</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Sauce?</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="">Sauce</div>
+                            <form class="form-horizontal">
+                                <div>
+                                    <label>
+                                        <select class="form-control">
+                                            <option>Tomato sauce</option>
+                                            <option>Marinara sauce</option>
+                                            <option>BBQ sauce</option>
+                                            <option>Alfredo sauce</option>
+                                        </select>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <!-- custom JS goes here -->
+    </body>
+</html>
