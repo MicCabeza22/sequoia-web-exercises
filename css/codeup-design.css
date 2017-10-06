@@ -1,0 +1,53 @@
+body {
+    background-color: #f0f0f0;
+}
+h1 {
+    font-family: 'Anton', sans-serif;
+}
+p {
+    font-family: 'Abel', sans-serif;
+}
+
+div#icon-red {
+    width: 18px;
+    height: 18px;
+    background-color: #e6563b;
+    border-radius: 9px;
+    font-family: 'Anton', sans-serif;
+    font-size: 9px;
+    text-align: center;
+    padding-top: 4px;
+}
+
+div#icon-orange {
+    width: 18px;
+    height: 18px;
+    background-color: #eb9d3a;
+    border-radius: 9px;
+    font-family: 'Anton', sans-serif;
+    font-size: 9px;
+    text-align: center;
+    padding-top: 4px;
+}
+
+div#icon-green {
+    width: 18px;
+    height: 18px;
+    background-color: #7cb06c;
+    border-radius: 9px;
+    font-family: 'Anton', sans-serif;
+    font-size: 9px;
+    text-align: center;
+    padding-top: 4px;
+}
+
+div#icon-blue {
+    width: 18px;
+    height: 18px;
+    background-color: #00aba9;
+    border-radius: 9px;
+    font-family: 'Anton', sans-serif;
+    font-size: 9px;
+    text-align: center;
+    padding-top: 4px;
+}
