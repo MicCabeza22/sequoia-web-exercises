@@ -1,8 +1,9 @@
 body {
     background-color: #f0f0f0;
 }
-h1 {
+h1, h2, h3 {
     font-family: 'Anton', sans-serif;
+    text-align: center;
 }
 p {
     font-family: 'Abel', sans-serif;
