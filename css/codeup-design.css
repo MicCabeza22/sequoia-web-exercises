@@ -9,6 +9,12 @@ p {
     font-family: 'Abel', sans-serif;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
 div#icon-red {
     width: 18px;
     height: 18px;
