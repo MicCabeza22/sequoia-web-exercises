@@ -1,9 +1,43 @@
 body {
     background-color: #f0f0f0;
 }
-h1, h2, h3 {
+
+.navbar {
+    margin-top: 30px;
+}
+
+.navbar-brand {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    margin: auto;
+}
+
+h1, h2, h4, h5 {
     font-family: 'Anton', sans-serif;
     text-align: center;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+h2#small {
+    font-size: 40px;
+}
+
+h4 {
+    font-size: 32px;
+}
+
+h5 {
+    font-size: 28px;
 }
 
 p {
@@ -14,6 +48,11 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+#logo {
+    width: 105px;
+    height: 105px;
 }
 
 div#icon-red {
