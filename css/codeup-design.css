@@ -7,9 +7,17 @@ body {
     margin-top: 30px;
 }
 
+.navbar-brand{
+    text-align: center;
+}
+
 .row-tall {
     margin-top: 25%;
     font-size: 20px;
+}
+
+ul {
+    list-style: none;
 }
 
 h1, h2, h4, h5 {
@@ -41,6 +49,10 @@ p {
     font-family: 'Abel', sans-serif;
 }
 
+p.header{
+    font-size: 48px;
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -56,7 +68,13 @@ img {
     height: 105px;
 }
 
-div#icon-red {
+.ipad {
+    width: 96%;
+    height: 96%;
+    margin-left: 2%;
+}
+
+#icon-red {
     width: 18px;
     height: 18px;
     background-color: #e6563b;
@@ -68,7 +86,7 @@ div#icon-red {
     margin: 0 auto;
 }
 
-div#icon-orange {
+#icon-orange {
     width: 18px;
     height: 18px;
     background-color: #eb9d3a;
@@ -79,7 +97,7 @@ div#icon-orange {
     padding-top: 4px;
 }
 
-div#icon-green {
+#icon-green {
     width: 18px;
     height: 18px;
     background-color: #7cb06c;
@@ -90,7 +108,7 @@ div#icon-green {
     padding-top: 4px;
 }
 
-div#icon-blue {
+#icon-blue {
     width: 18px;
     height: 18px;
     background-color: #00aba9;
