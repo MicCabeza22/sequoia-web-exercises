@@ -1,9 +1,15 @@
 body {
     background-color: #f0f0f0;
+    height: 100%;
 }
 
 .navbar {
     margin-top: 30px;
+}
+
+.row-tall {
+    margin-top: 25%;
+    font-size: 20px;
 }
 
 h1, h2, h4, h5 {
