@@ -5,10 +5,18 @@ body {
 
 .navbar {
     margin-top: 30px;
+    margin-bottom: -5px;
 }
 
 .navbar-brand{
-    text-align: center;
+    position: absolute;
+    left: 50%;
+    display: block;
+    margin-left: -53px !important;
+}
+
+.jumbotron {
+    background-color: #f0f0f0;
 }
 
 .row-tall {
@@ -53,6 +61,11 @@ p.header{
     font-size: 48px;
 }
 
+.li-inline {
+    display: inline-block;
+    margin: 12px;
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -64,8 +77,10 @@ img {
 }
 
 #logo {
+    position: relative;
     width: 105px;
     height: 105px;
+    bottom: 44px;
 }
 
 .ipad {
