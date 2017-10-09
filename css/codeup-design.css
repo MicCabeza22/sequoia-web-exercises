@@ -6,15 +6,6 @@ body {
     margin-top: 30px;
 }
 
-.navbar-brand {
-    position: relative;
-    width: 100%;
-    left: 0;
-    top: 0;
-    text-align: center;
-    margin: auto;
-}
-
 h1, h2, h4, h5 {
     font-family: 'Anton', sans-serif;
     text-align: center;
@@ -50,6 +41,10 @@ img {
     height: auto;
 }
 
+.img-thumbnail {
+    background: #e6e6e6;
+}
+
 #logo {
     width: 105px;
     height: 105px;
@@ -64,6 +59,7 @@ div#icon-red {
     font-size: 9px;
     text-align: center;
     padding-top: 4px;
+    margin: 0 auto;
 }
 
 div#icon-orange {
