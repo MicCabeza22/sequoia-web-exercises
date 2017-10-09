@@ -99,10 +99,6 @@ img {
     font-size: 9px;
     text-align: center;
     padding-top: 3px;
-    display: inline-block;
-    position: relative;
-    bottom: 2px;
-    zoom: 1.5;
 }
 
 #icon-orange {
@@ -115,26 +111,18 @@ img {
     font-size: 9px;
     text-align: center;
     padding-top: 3px;
-    display: inline-block;
-    position: relative;
-    bottom: 2px;
-    zoom: 1.5;
 }
 
 #icon-green {
     width: 18px;
     height: 18px;
-    margin-right: 4px;
     background-color: #7cb06c;
     border-radius: 9px;
     font-family: 'Anton', sans-serif;
     font-size: 9px;
     text-align: center;
     padding-top: 3px;
-    display: inline-block;
-    position: relative;
-    bottom: 2px;
-    zoom: 1.5;
+    margin-right: 4px;
 }
 
 #icon-blue {
@@ -147,8 +135,4 @@ img {
     font-size: 9px;
     text-align: center;
     padding-top: 3px;
-    display: inline-block;
-    position: relative;
-    bottom: 2px;
-    zoom: 1.5;
 }
