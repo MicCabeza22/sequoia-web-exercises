@@ -6,6 +6,12 @@ body {
 .navbar {
     margin-top: 30px;
     margin-bottom: -5px;
+    background-color: #fff;
+    border-color: #fff;
+}
+
+a {
+    color: #000;
 }
 
 .navbar-brand{
@@ -17,6 +23,7 @@ body {
 
 .jumbotron {
     background-color: #f0f0f0;
+    margin-bottom: 0;
 }
 
 .row-tall {
@@ -98,7 +105,9 @@ img {
     font-family: 'Anton', sans-serif;
     font-size: 9px;
     text-align: center;
-    padding-top: 3px;
+    padding-top: 4px;
+    display: inline-block;
+
 }
 
 #icon-orange {
@@ -110,19 +119,21 @@ img {
     font-family: 'Anton', sans-serif;
     font-size: 9px;
     text-align: center;
-    padding-top: 3px;
+    padding-top: 4px;
+    display: inline-block;
 }
 
 #icon-green {
     width: 18px;
     height: 18px;
+    margin-right: 4px;
     background-color: #7cb06c;
     border-radius: 9px;
     font-family: 'Anton', sans-serif;
     font-size: 9px;
     text-align: center;
-    padding-top: 3px;
-    margin-right: 4px;
+    padding-top: 4px;
+    display: inline-block;
 }
 
 #icon-blue {
@@ -134,5 +145,6 @@ img {
     font-family: 'Anton', sans-serif;
     font-size: 9px;
     text-align: center;
-    padding-top: 3px;
+    padding-top: 4px;
+    display: inline-block;
 }
