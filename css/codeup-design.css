@@ -1,53 +1,175 @@
 body {
     background-color: #f0f0f0;
+    /*background-image:url('assets/images/logo.png');*/
 }
-h1 {
+h1,h2,h4,h5{
     font-family: 'Anton', sans-serif;
-}
-p {
-    font-family: 'Abel', sans-serif;
+    /*height: 40px;*/
+    text-align: center;
 }
 
-div#icon-red {
-    width: 18px;
-    height: 18px;
-    background-color: #e6563b;
-    border-radius: 9px;
-    font-family: 'Anton', sans-serif;
-    font-size: 9px;
-    text-align: center;
-    padding-top: 4px;
+h1{
+    font-size: 64px;
 }
 
-div#icon-orange {
-    width: 18px;
-    height: 18px;
-    background-color: #eb9d3a;
-    border-radius: 9px;
-    font-family: 'Anton', sans-serif;
-    font-size: 9px;
-    text-align: center;
-    padding-top: 4px;
+h2{
+    font-size: 48px;
 }
 
-div#icon-green {
-    width: 18px;
-    height: 18px;
-    background-color: #7cb06c;
-    border-radius: 9px;
-    font-family: 'Anton', sans-serif;
-    font-size: 9px;
-    text-align: center;
-    padding-top: 4px;
+h2.small{
+    font-size: 40px;
+}
+#design {
+    width: 70px;
+    height: 70px;
+    /*position: relative;*/
+    /*top:-15px;*/
+    /*left:300px;*/
+
 }
 
-div#icon-blue {
-    width: 18px;
-    height: 18px;
-    background-color: #00aba9;
-    border-radius: 9px;
-    font-family: 'Anton', sans-serif;
-    font-size: 9px;
-    text-align: center;
-    padding-top: 4px;
+#develop{
+    width: 70px;
+    height: 70px;
+    /*position: relative;*/
+    /*top:-15px;*/
+    /*left:300px;*/
 }
+
+#host{
+    width: 70px;
+    height: 70px;
+    /*position: relative;*/
+    /*top:-15px;*/
+    /*left:230px;*/
+}
+
+#support {
+    width: 70px;
+    height: 70px;
+    /*position: relative;*/
+    /*top:-15px;*/
+    /*left:300px;*/
+}
+
+.nav{
+    position: relative;
+    left: 475px;
+}
+
+#logo{
+    height:100px;
+    width: 100px;
+    position: relative;
+    top:-35px;
+    right:-200px;
+
+}
+
+.navbar-header p{
+     position: relative;
+     top: -100px;
+     right: -300px;
+}
+
+.ipad-mac{
+
+    height:100%;
+    width: 100%;
+}
+
+.img-thumbnail{
+    background-color:#e6e6e6;
+}
+
+.tiny-mac{
+    height: 40px;
+    width: 40px;
+}
+
+
+img{
+    width:100%;
+}
+
+.annoying{
+    height:120px;
+}
+
+hr{
+    border-color: black;
+    margin-bottom: 80px;
+}
+
+.jumbotron{
+    margin: 0;
+}
+
+#circle-orange {
+    /*-webkit-border-radius: 25px;*/
+    /*-moz-border-radius: 25px;*/
+    border-radius: 10px;
+    background: #E6563B;
+    color: black;
+    text-align: center;
+
+}
+
+#circle-yellow {
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: #EB9D3A;
+    color: black;
+    text-align: center;
+}
+
+#circle-green {
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: #7CB06C;
+    color: black;
+    text-align: center;
+}
+
+#circle-blue {
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    background: #00ABA9;
+    color: black;
+    text-align: center;
+}
+
+.super-small {
+    font-size: x-small;
+    position: relative;
+    top: -5px;
+    right:1px;
+
+}
+
+.icon-circle {
+    float: left;
+    margin-right: 4px;
+    height: 18px;
+    width: 18px;
+    margin-bottom: 50px;
+
+}
+
+.security{
+    height: 122px;
+}
+
+.text{
+   font-size: 12px;
+}
+
+/*.lap-top-pic{*/
+   /*position: relative;*/
+    /*top: 27px;*/
+/*}*/
+
+
