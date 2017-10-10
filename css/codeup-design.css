@@ -166,6 +166,11 @@ img {
         border-color: darkgray;
     }
 
+    .ipad {
+        width: 100%;
+        height: 100%;
+    }
+
     #icon-red {
         padding-top: 4px;
         zoom: 1;
