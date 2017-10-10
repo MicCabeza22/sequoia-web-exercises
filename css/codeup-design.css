@@ -157,6 +157,11 @@ img {
         margin-bottom: 0;
     }
 
+    div.col-sm-2 {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
     hr {
         border-color: darkgray;
     }
