@@ -96,7 +96,7 @@ img {
     margin-left: 3%;
 }
 
-#icon-red {
+.icon-red {
     width: 18px;
     height: 18px;
     margin-right: 4px;
@@ -110,7 +110,7 @@ img {
     zoom: 1.5;
 }
 
-#icon-orange {
+.icon-orange {
     width: 18px;
     height: 18px;
     margin-right: 4px;
@@ -124,7 +124,7 @@ img {
     zoom: 1.5;
 }
 
-#icon-green {
+.icon-green {
     width: 18px;
     height: 18px;
     margin-right: 4px;
@@ -138,7 +138,7 @@ img {
     zoom: 1.5;
 }
 
-#icon-blue {
+.icon-blue {
     width: 18px;
     height: 18px;
     margin-right: 4px;
