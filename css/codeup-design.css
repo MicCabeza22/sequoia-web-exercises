@@ -91,9 +91,9 @@ img {
 }
 
 .ipad {
-    width: 96%;
-    height: 96%;
-    margin-left: 2%;
+    width: 94%;
+    height: 94%;
+    margin-left: 3%;
 }
 
 #icon-red {
@@ -105,9 +105,9 @@ img {
     font-family: 'Anton', sans-serif;
     font-size: 9px;
     text-align: center;
-    padding-top: 4px;
+    padding-top: 3px;
     display: inline-block;
-
+    zoom: 1.5;
 }
 
 #icon-orange {
@@ -119,8 +119,9 @@ img {
     font-family: 'Anton', sans-serif;
     font-size: 9px;
     text-align: center;
-    padding-top: 4px;
+    padding-top: 3px;
     display: inline-block;
+    zoom: 1.5;
 }
 
 #icon-green {
@@ -132,8 +133,9 @@ img {
     font-family: 'Anton', sans-serif;
     font-size: 9px;
     text-align: center;
-    padding-top: 4px;
+    padding-top: 3px;
     display: inline-block;
+    zoom: 1.5;
 }
 
 #icon-blue {
@@ -145,6 +147,19 @@ img {
     font-family: 'Anton', sans-serif;
     font-size: 9px;
     text-align: center;
-    padding-top: 4px;
+    padding-top: 3px;
     display: inline-block;
+    zoom: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+    /* ... */
+}
+
+@media screen and (min-width: 992px) {
+    /* .. */
+}
+
+@media screen and (min-width: 1200px) {
+    /* .. */
 }
