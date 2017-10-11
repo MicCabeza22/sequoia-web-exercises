@@ -1,0 +1,27 @@
+h2, h3 {
+    text-align: center;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+tr, th, td {
+    text-align: left;
+    padding-right: 35px;
+}
+
+body {
+    background-color: orange;
+}
+
+.warning {
+    color: red;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+}
+
+li {
+    list-style: square;
+}

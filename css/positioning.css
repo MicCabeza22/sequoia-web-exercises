@@ -1,0 +1,55 @@
+.box {
+    border: 1px solid #000;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    margin: 50px 50px 0 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.box:nth-child(2n+1) {
+    clear: left;
+}
+
+.red {
+    background-color: red;
+    float: left;
+}
+
+.orange {
+    background-color: orange;
+    float: left;
+}
+
+.yellow {
+    background-color: #ff0;
+    float: left;
+}
+
+.green {
+    background-color: #0f0;
+    float: left;
+}
+
+.blue {
+    background-color: #00f;
+    float: left;
+}
+
+.violet {
+    background-color: violet;
+    float: left;
+}
+
+.ribbon {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.arrow {
+    position: relative;
+    left: 42px;
+    bottom: 101px;
+}
