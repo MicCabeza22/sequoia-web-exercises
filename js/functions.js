@@ -100,4 +100,4 @@ function calculateNextTip() {
     alert("You should tip " + (nextBill * nextTipPercentage));
 }
 
-calculateNextTip();
+calculateNextTip()
