@@ -1,4 +1,5 @@
-"use strict";
+(function (){
+    "use strict";
 
 /**
  * TODO:
@@ -9,11 +10,11 @@
  *  > sayHello("codeup") // returns "Hello, codeup!"
  */
 
-function sayHello(name) {
-    return "Hello, " + name + ".";
-}
+    function sayHello(name) {
+        return "Hello, " + name + ".";
+    }
 
-sayHello("Joe");
+    console.log(sayHello("Joe"));
 
 /**
  * TODO:
@@ -23,9 +24,9 @@ sayHello("Joe");
  * console.log 'helloMessage' to check your work
  */
 
-sayHello("Michael");
-var helloMessage = sayHello("Michael");
-console.log(helloMessage);
+    sayHello("Michael");
+    var helloMessage = sayHello("Michael");
+    console.log(helloMessage);
 
 /**
  * TODO:
@@ -34,13 +35,13 @@ console.log(helloMessage);
  * console.
  */
 
-var myName = "Michael";
-console.log(sayHello(myName));
+    var myName = "Michael";
+    console.log(sayHello(myName));
 
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+    var random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -60,13 +61,13 @@ var random = Math.floor((Math.random() * 3) + 1);
  * number)
  */
 
-function isTwo(number) {
-    return number === 2;
-}
+    function isTwo(number) {
+        return number === 2;
+    }
 
-isTwo(random);
-console.log(random);
-console.log(isTwo(random));
+    isTwo(random);
+    console.log(random);
+    console.log(isTwo(random));
 
 /**
  * TODO:
@@ -78,14 +79,14 @@ console.log(isTwo(random));
  * > calculateTip(0.20, 20) // returns 4
  */
 
-function calculateTip() {
-    return bill * tipPercentage;
-}
+    function calculateTip() {
+        return bill * tipPercentage;
+    }
 
-var bill = 19.39;
-const tipPercentage = 0.15;
-calculateTip();
-console.log(calculateTip());
+    var bill = 19.39;
+    const tipPercentage = 0.15;
+    calculateTip();
+    console.log(calculateTip());
 
 /**
  * TODO:
@@ -94,10 +95,11 @@ console.log(calculateTip());
  * then display the dollar amount they should tip
  */
 
-function calculateNextTip() {
-    var nextBill = prompt("Enter the total amount charged.");
-    const nextTipPercentage = prompt("Enter the tip percentage.");
-    alert("You should tip " + (nextBill * nextTipPercentage));
-}
+    function calculateNextTip() {
+        var nextBill = prompt("Enter the total amount charged.");
+        const nextTipPercentage = prompt("Enter the tip percentage.");
+        alert("You should tip " + (nextBill * nextTipPercentage));
+    }
 
-calculateNextTip();
+    calculateNextTip();
+})();
