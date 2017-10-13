@@ -173,5 +173,11 @@
      * price before the discount was, and what their price after the discount is.
      */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+var luckyNumber = Math.floor(Math.random() * 6);
+var totalAmount = prompt("Enter your total bill.");
+calculateTotal(luckyNumber, 0.1);
+alert("Your lucky number is " + luckyNumber + "!");
+alert("Your price before your discount is " + totalAmount + ".");
+alert("Your price after your discount is " + totalAmount - (totalAmount - discountPercentage)
++ "!");
 })();
