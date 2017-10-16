@@ -40,6 +40,26 @@
         }
     }
 
+    function isANumber(input) {
+        return !isNaN(input);
+    }
+
+    function isNegative(input) {
+        return input < 0;
+    }
+
+    function isPositive(input) {
+        return input > 0;
+    }
+
+    function isEven(input) {
+        return input % 2 === 0;
+    }
+
+    function isOdd() {
+        return !isEven(input);
+    }
+
     /* ########################################################################## */
 
     /**
@@ -88,11 +108,11 @@
 
     console.log(analyzeColor("violet"));
 
-// Don't change the next two lines!
-// These lines create two variables for you:
-// - `colors`: a list of the colors of the rainbow
-// - `randomColor`: contains a single random color value from the list (this
-//                  will contain a different color everytime the page loads)
+    // Don't change the next two lines!
+    // These lines create two variables for you:
+    // - `colors`: a list of the colors of the rainbow
+    // - `randomColor`: contains a single random color value from the list (this
+    //                  will contain a different color everytime the page loads)
     var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
     var randomColor = colors[Math.floor(Math.random() * colors.length)];
     /**
@@ -127,7 +147,7 @@
      * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
      * all for free!.
      *
-     * Write a function named `caculateTotal` that accepts a lucky number and total
+     * Write a function named `calculateTotal` that accepts a lucky number and total
      * amount, and returns the discounted price.
      *
      * Example:
@@ -139,31 +159,30 @@
      * return value.
      */
 
-    function calculateTotal(luckyNumber, discountPercentage) {
-        var totalAmount = 49.99;
+    function calculateTotal(luckyNumber, totalAmount) {
         switch (luckyNumber) {
             case "zero":
-                return "Your total is " + totalAmount;
+                return totalAmount;
                 break;
             case "one":
-                return "Your total is " + (totalAmount - (totalAmount * discountPercentage));
+                return (totalAmount - (totalAmount * 0.1));
                 break;
             case "two":
-                return "Your total is " + (totalAmount - (totalAmount * discountPercentage));
+                return (totalAmount - (totalAmount * 0.25));
                 break;
             case "three":
-                return "Your total is " + (totalAmount - (totalAmount * discountPercentage));
+                return (totalAmount - (totalAmount * 0.35));
                 break;
             case "four":
-                return "Your total is " + (totalAmount - (totalAmount * discountPercentage));
+                return (totalAmount - (totalAmount * 0.5));
                 break;
             case "five":
-                return "Your total is " + (totalAmount - (totalAmount * discountPercentage));
+                return (totalAmount - (totalAmount * 1));
                 break;
         }
     }
 
-    console.log(calculateTotal("five", 1));
+    console.log(calculateTotal("three", 49.99));
 
     /**
      * TODO:
@@ -172,12 +191,52 @@
      * and alerts to display to the user what their lucky number was, what their
      * price before the discount was, and what their price after the discount is.
      */
-// Generate a random number between 0 and 6
-var luckyNumber = Math.floor(Math.random() * 6);
-var totalAmount = prompt("Enter your total bill.");
-calculateTotal(luckyNumber, 0.1);
-alert("Your lucky number is " + luckyNumber + "!");
-alert("Your price before your discount is " + totalAmount + ".");
-alert("Your price after your discount is " + totalAmount - (totalAmount - discountPercentage)
-+ "!");
+    // Generate a random number between 0 and 6
+    var luckyNumber = Math.floor(Math.random() * 6);
+    var totalAmount = prompt("Enter your total bill.");
+
+    alert("Your lucky number is " + luckyNumber + "!");
+    alert("Your price before your discount is " + totalAmount + ".");
+    alert("Your price after your discount is " +  + "!");
+
+    /* ########################################################################## */
+
+    // ================================= CONDITIONALS BONUSES
+    // Bonus 1
+    //
+    // Create a function that prompts a user for their favorite day of the week and alerts a unique message based on the day.
+    // - Catch any invalid inputs.
+    // - Write the logic using if/else ifs and then refactor using a switch case
+
+    function favoriteDayOfTheWeek(favoriteDay) {
+        switch (favoriteDay) {
+            case "Sunday":
+                alert("Praise the Lord, it's Sunday!");
+                break;
+            case "Monday":
+                alert("Ugh. It's Monday.");
+                break;
+            case "Tuesday":
+                alert("At least it's now Tuesday.");
+                break;
+            case "Wednesday":
+                alert("Got over that hump somehow.");
+                break;
+            case "Thursday":
+                alert("It's Thursday!");
+                break;
+            case "Friday":
+                alert("Everybody's working for the weekend!");
+                break;
+            case "Saturday":
+                alert("Woo! Saturday!");
+                break;
+            default:
+                alert("That is not a day of the week.");
+                break;
+        }
+    }
+
+    var favoriteDay = prompt("Enter your favorite day of the week");
+    favoriteDayOfTheWeek(favoriteDay);
 })();
