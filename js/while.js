@@ -27,7 +27,7 @@
         if (allCones < sellCones) {
             console.log("I cannot sell more cones than I have available.");
         }
-    } while (allCones > sellCones);
+    } while (allCones > 0);
 
     if (allCones === 0) {
         console.log("All cones have been sold!");
