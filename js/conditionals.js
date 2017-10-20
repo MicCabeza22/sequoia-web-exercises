@@ -161,9 +161,6 @@
 
     function calculateTotal(luckyNumber, totalAmount) {
         switch (luckyNumber) {
-            case "zero":
-                return totalAmount;
-                break;
             case "one":
                 return (totalAmount - (totalAmount * 0.1));
                 break;
@@ -178,6 +175,9 @@
                 break;
             case "five":
                 return (totalAmount - (totalAmount * 1));
+                break;
+            default:
+                return totalAmount;
                 break;
         }
     }
@@ -194,10 +194,11 @@
     // Generate a random number between 0 and 6
     var luckyNumber = Math.floor(Math.random() * 6);
     var totalAmount = prompt("Enter your total bill.");
+    var finalAmount = calculateTotal(luckyNumber, totalAmount);
 
     alert("Your lucky number is " + luckyNumber + "!");
     alert("Your price before your discount is " + totalAmount + ".");
-    alert("Your price after your discount is " +  + "!");
+    alert("Your price after your discount is " + finalAmount + "!");
 
     /* ########################################################################## */
 

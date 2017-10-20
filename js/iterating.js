@@ -70,7 +70,8 @@
     }
 
     function third(thirdArray) {
-        return thirdArray[4];
+        // return thirdArray[4];
+        return thirdArray[thirdArray.length - 1];
     }
 
     console.log(first([1, 2, 3, 4, 5]));
