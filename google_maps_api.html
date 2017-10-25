@@ -1,10 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Google Maps API</title>
+        <style type="text/css">
+            #map-canvas {
+                width: 770px;
+                height: 481px;
+            }
+        </style>
+    </head>
+    <body>
+    <!-- div to hold map -->
+        <div id="map-canvas"></div>
+
+        <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATZB7y9Bn1SE3GzcKEaxdSdRyngVeD9a0"></script>
+
+        <!-- Script to show address on map -->
+        <script type="text/javascript">
+            (function() {
+                "use strict";
+
+                // Set our map options
+                var mapOptions = {
+                    // Set the zoom level
+                    zoom: 17,
+
+                    // This sets the center of the map at our location
+                    center: {
+                        lat:  29.426791,
+                        lng: -98.489602
+                    }
+                };
+
+                var address = "8531 TX-151, San Antonio, TX, 78245";
+                var geocoder = new google.maps.Geocoder();
+
+                geocoder.geocode({"address": address}, function(results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        map.setCenter(results[0].geometry.location);
+                    } else {
+                        alert("Geocoding was not successful - STATUS: " + status)
+                    }
+                });
+
+                // Render the map
+                var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+                var panera = { lat: 29.438337, lng: -98.654838 };
+                var marker = new google.maps.Marker({
+                    position: panera,
+                    map: map
+                });
+                var infowindow = new google.maps.InfoWindow({
+                    content: "Panera Bread"
+                });
+
+                infowindow.open(map, marker);
+            })();
+        </script>
+    </body>
 </html>
