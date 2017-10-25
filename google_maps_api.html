@@ -47,16 +47,30 @@
 
                 // Render the map
                 var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+                // Adds a marker on the map at the specified coordinates
                 var panera = { lat: 29.438337, lng: -98.654838 };
                 var marker = new google.maps.Marker({
                     position: panera,
                     map: map
                 });
+
+                // Adds an info window above the marker
+                var infowindowContent = "<p>" + "I like Panera Bread because they have great food and" + "</p>";
+                infowindowContent += "<p>" + "bakery items, my favorite being sourdough bread!" + "</p>";
+                infowindowContent += "<ul>"
+                    + "<li>" + "Try the cookies!" + "</li>"
+                    + "<li>" + "Mac and cheese in a bread bowl? Yum!" + "</li>"
+                    + "<li>" + "It's not too crowded, even during peak hours!" + "</li>"
+                    + "</ul>";
                 var infowindow = new google.maps.InfoWindow({
-                    content: "Panera Bread"
+                    content: infowindowContent
                 });
 
-                infowindow.open(map, marker);
+                // This hides the info window until the marker is clicked on
+                marker.addListener("click", function () {
+                    infowindow.open(map, marker);
+                })
             })();
         </script>
     </body>
