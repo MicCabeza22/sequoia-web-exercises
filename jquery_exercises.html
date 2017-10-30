@@ -5,12 +5,23 @@
         <title>jQuery Exercises</title>
     </head>
     <body>
+        <div id="divi" class="dend">
+            <h1 id="head" class="er">Header 1</h1>
+            <p id="para" class="graph">
+                This is a paragraph even though there is only one
+                sentence because HTML SAYS SO.
+            </p>
+            <ul id="unordered" class="list">
+                <li id="list1" class="item">Item 1</li>
+                <li id="list2" class="item">Selection 2</li>
+                <li id="list3" class="item">Number 3</li>
+            </ul>
+        </div>
+
         <script src="js/jquery-2.2.4.js"></script>
         <script>
-            $(document).ready(function() {
-                "use strict";
-                alert("The DOM has finished loading.")
-            });
+            var para = $("#para").html();
+            alert(para);
         </script>
     </body>
 </html>
