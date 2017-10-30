@@ -21,9 +21,9 @@
         <!-- Adds jQuery to the file. -->
         <script src="js/jquery-2.2.4.js"></script>
         <script>
-            $("li").css("font-size", "20px");
-            var contents = $("h1, p, li").html();
-            alert(contents);
+            $("h1").click(function() {
+                $(this).css("background-color", "gray");
+            });
         </script>
     </body>
 </html>
