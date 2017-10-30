@@ -12,16 +12,18 @@
                 sentence because HTML SAYS SO.
             </p>
             <ul id="unordered" class="list">
-                <li id="list1" class="item">Item 1</li>
-                <li id="list2" class="item">Selection 2</li>
+                <li id="list1" class="codeup">Item 1</li>
+                <li id="list2" class="codeup">Selection 2</li>
                 <li id="list3" class="item">Number 3</li>
             </ul>
         </div>
 
+        <!-- Adds jQuery to the file. -->
         <script src="js/jquery-2.2.4.js"></script>
         <script>
-            var para = $("#para").html();
-            alert(para);
+            var head = $("#head").html();
+            alert(head);
+            $(".codeup").css("border", "1px solid red");
         </script>
     </body>
 </html>
