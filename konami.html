@@ -11,20 +11,21 @@
             "use strict";
 
             var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+            var konamiCodePosition = 0;
 
             $(document).keyup(function(event) {
+                console.log(event.keyCode);
                 var input = event.keyCode;
 
-                for (var i = 0; i < konamiCode.length; i++) {
-                    if (input === konamiCode[i]) {
-                        if (i === (konamiCode.length - 1)) {
-                            alert("Code entered!");
-                            $("body").css("background-color", "red");
-                            $("h1").html("YOU'VE DONE IT NOW").css("font-size", "200px").css("text-align", "center");
-                        }
-                    } else {
-                        i++;
+                if (input === konamiCode[konamiCodePosition]) {
+                    if (konamiCodePosition === (konamiCode.length - 1)) {
+                        alert("Code entered successfully!");
+                        $("body").css("background-color", "red");
+                        $("h1").html("YOU'VE DONE IT NOW").css("font-size", "200px").css("text-align", "center");
                     }
+                    konamiCodePosition++;
+                } else {
+                    konamiCodePosition = 0;
                 }
             });
         </script>
