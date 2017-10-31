@@ -1,10 +1,90 @@
+<!--
+MUST BE COMPLETED
+-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery FAQ</title>
+        <style>
+            .invisible {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <dl>
+            <dt>What is a national park?</dt>
+            <dd class="invisible"></dd>
+
+            <dt>Who created national parks?</dt>
+            <dd class="invisible"></dd>
+
+            <dt>How many national parks are there?</dt>
+            <dd class="invisible"></dd>
+
+            <dt>Are national parks open to the public?</dt>
+            <dd class="invisible"></dd>
+
+            <dt>Where are national parks located?</dt>
+            <dd class="invisible"></dd>
+
+            <dt>What can I do at a national park?</dt>
+            <dd class="invisible"></dd>
+
+            <dt>How are national parks named?</dt>
+            <dd class="invisible"></dd>
+
+            <dt>What are the oldest/newest national parks?</dt>
+            <dd class="invisible">
+                The oldest national park is Yellowstone National Park located in Wyoming and established on March 1,
+                1872. The newest national park is the Katahdin Woods and Waters National Monument located in Maine and
+                established on August 25, 2016.
+            </dd>
+
+            <dt>Who oversees all of the national parks?</dt>
+            <dd class="invisible">The United States Department of the Interior.</dd>
+
+            <dt>Do national parks exist to conceal top-secret government facilities?</dt>
+            <dd class="invisible">No.</dd>
+        </dl>
+
+        <h3>Yellowstone</h3>
+        <ul>
+            <li>Fact 1</li>
+            <li>Fact 2</li>
+            <li>Fact 3</li>
+            <li>Fact 4</li>
+        </ul>
+
+        <h3>Sequoia</h3>
+        <ul>
+            <li>Fact 1</li>
+            <li>Fact 2</li>
+            <li>Fact 3</li>
+            <li>Fact 4</li>
+        </ul>
+
+        <h3>Redwood</h3>
+        <ul>
+            <li>Fact 1</li>
+            <li>Fact 2</li>
+            <li>Fact 3</li>
+            <li>Fact 4</li>
+        </ul>
+
+        <button type="button" class="yellowbg">Click me!</button>
+
+        <script src="js/jquery-2.2.4.js"></script>
+        <script>
+            //  Section 1
+
+            //  Section 2
+            $(".yellowbg").click(function () {
+                $("ul").each(function() {
+                    $("li").last().css("background-color", "yellow");
+                });
+            });
+        </script>
+    </body>
 </html>
