@@ -86,8 +86,13 @@ MUST BE COMPLETED
                     $(this).children().last().css("background-color", "yellow");
                 });
             });
+            
             $("h3").click(function () {
-                $("li").css("font-weight", "bold");
+                $(this).next().css("font-weight", "bold");
+            });
+            
+            $("li").click(function () {
+                $(this).parent().children().first().css("color", "blue");
             });
         </script>
     </body>
