@@ -18,6 +18,8 @@ MUST BE COMPLETED
             <span class="hide">x</span>
         </div>
 
+        <h2>Would you like to register for the site?</h2>
+
         <dl>
             <dt>What is a national park?</dt>
             <dd class="invisible"></dd>
@@ -55,7 +57,7 @@ MUST BE COMPLETED
         </dl>
 
         <h3>Yellowstone</h3>
-        <ul>
+        <ul class="invisible">
             <li>Fact 1</li>
             <li>Fact 2</li>
             <li>Fact 3</li>
@@ -63,7 +65,7 @@ MUST BE COMPLETED
         </ul>
 
         <h3>Sequoia</h3>
-        <ul>
+        <ul class="invisible">
             <li>Fact 1</li>
             <li>Fact 2</li>
             <li>Fact 3</li>
@@ -71,7 +73,7 @@ MUST BE COMPLETED
         </ul>
 
         <h3>Redwood</h3>
-        <ul>
+        <ul class="invisible">
             <li>Fact 1</li>
             <li>Fact 2</li>
             <li>Fact 3</li>
@@ -94,6 +96,7 @@ MUST BE COMPLETED
             
             $("h3").click(function () {
                 $(this).next().css("font-weight", "bold");
+                $(this).next().slideDown();
             });
             
             $("li").click(function () {
@@ -102,7 +105,7 @@ MUST BE COMPLETED
 
             $(".hide").click(function () {
                 $("div").hide();
-            })
+            });
         </script>
     </body>
 </html>
