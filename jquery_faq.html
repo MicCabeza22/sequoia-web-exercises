@@ -77,13 +77,17 @@ MUST BE COMPLETED
 
         <script src="js/jquery-2.2.4.js"></script>
         <script>
+            "use strict";
             //  Section 1
 
             //  Section 2
             $(".yellowbg").click(function () {
                 $("ul").each(function() {
-                    $("li").last().css("background-color", "yellow");
+                    $(this).children().last().css("background-color", "yellow");
                 });
+            });
+            $("h3").click(function () {
+                $("li").css("font-weight", "bold");
             });
         </script>
     </body>
