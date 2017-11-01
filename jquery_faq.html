@@ -13,6 +13,11 @@ MUST BE COMPLETED
         </style>
     </head>
     <body>
+        <div>
+            <h1>Would you like to sign up for our newsletter?</h1>
+            <span class="hide">x</span>
+        </div>
+
         <dl>
             <dt>What is a national park?</dt>
             <dd class="invisible"></dd>
@@ -94,6 +99,10 @@ MUST BE COMPLETED
             $("li").click(function () {
                 $(this).parent().children().first().css("color", "blue");
             });
+
+            $(".hide").click(function () {
+                $("div").hide();
+            })
         </script>
     </body>
 </html>
