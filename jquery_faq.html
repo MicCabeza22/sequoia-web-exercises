@@ -18,7 +18,7 @@ MUST BE COMPLETED
             <span class="hide">x</span>
         </div>
 
-        <h2>Would you like to register for the site?</h2>
+        <h2 class="invisible">Would you like to register for the site?</h2>
 
         <dl>
             <dt>What is a national park?</dt>
@@ -85,26 +85,28 @@ MUST BE COMPLETED
         <script src="js/jquery-2.2.4.js"></script>
         <script>
             "use strict";
-            //  Section 1
 
-            //  Section 2
-            $(".yellowbg").click(function () {
-                $("ul").each(function() {
-                    $(this).children().last().css("background-color", "yellow");
+            $(document).ready(function() {
+                $(".yellowbg").click(function () {
+                    $("ul").each(function () {
+                        $(this).children().last().css("background-color", "yellow");
+                    });
                 });
-            });
-            
-            $("h3").click(function () {
-                $(this).next().css("font-weight", "bold");
-                $(this).next().slideDown();
-            });
-            
-            $("li").click(function () {
-                $(this).parent().children().first().css("color", "blue");
-            });
 
-            $(".hide").click(function () {
-                $("div").hide();
+                $("h3").click(function () {
+                    $(this).next().css("font-weight", "bold");
+                    $(this).next().slideDown();
+                });
+
+                $("li").click(function () {
+                    $(this).parent().children().first().css("color", "blue");
+                });
+
+                $(".hide").click(function () {
+                    $("div").hide();
+                });
+
+                $("h2").delay(8000).fadeIn();
             });
         </script>
     </body>
