@@ -18,6 +18,8 @@
             <tbody id="insertProducts"></tbody>
         </table>
 
+        <button type="button" id="refresh">Refresh</button>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script>
             (function() {
@@ -26,7 +28,7 @@
 
                 $(document).ready(function () {
                     $.get("./data/inventory.json").done(function (data) {
-                        alert("Finished gathering data.");
+                        //  Add product data to the product table
                         data.forEach(function (data) {
                             $("#insertProducts")
                                 .append("<tr>")
@@ -36,6 +38,11 @@
                                 .append("<td>" + data.categories + "</td>")
                                 .append("</tr>");
                         });
+                    });
+
+                    //  Add functionality to the "Refresh" button
+                    $("#refresh").click(function () {
+                        location.reload();
                     });
 
                     // TODO: Take the data from inventory.json and append it to the products table
