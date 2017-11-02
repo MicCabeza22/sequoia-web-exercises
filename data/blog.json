@@ -14,13 +14,19 @@
             "tragedy"
         ],
         "date": "January 10, 2062"
-    },
-    {
+    }, {
         "title": "Jack B.'s Log, Entry #3",
         "content": "They're growing more and more aggressive. With the Belgians' airpower, French tanks rolled over the mountains and into nearby Italian villages. To think that only a week ago, the Italians were on the offensive along the coastline. They've since pulled back to reinforce primary fallback positions. The radio one of the other soldiers brought with her was relaying news of the French and Spanish navies suffering heavy losses after a major battle a few miles out from Portugal. At least we won't have to be dealing with as many enemy ships in the future.",
         "categories": [
             "field journal"
         ],
         "date": "January 17, 2062"
+    }, {
+        "title": "Jack B.'s Log, Entry #5",
+        "content": "Well, China joined the war. As if things weren't already bad enough. They wasted no time invading the surrounding countries to their northeast, continuing to push until the Chinese armies split Russia in two. The Canadians almost lost their entire navy to a handful of Chinese submarines, destroyers, and missile cruisers. They now own the entire Pacific. My wife can't even get her hands on ramen, a luxury compared to the President's dinner.",
+        "categories": [
+            "field journal"
+        ],
+        "date": "February 13, 2062"
     }
 ]
