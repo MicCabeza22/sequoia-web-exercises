@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Jack B.'s Log, Entry #1",
+        "content": "It's been two months since fighting broke out on the French-Italian border. I've been watching helicopters and fighter jets pass overhead to and from France. Meanwhile, I'm here guarding a border checkpoint with some other volunteers from Australia, Russia, and the Iberian Union. Every moment is spent wondering when French troops will suddenly come pouring from over the horizon. As soon as they do, I'll be ready for them. I only hope I'll be able to go back home to New York City in one piece.",
+        "categories": [
+            "field journal"
+        ],
+        "date": "January 9, 2062"
+    }, {
+        "title": "Jack B.'s Log, Entry #2",
+        "content": "Aleksandr didn't make it. I heard he was trying to pull Cpt. Salvador's body out from underneath some rubble when a tank shell exploded right above him. Neither of them will be going home. We lit candles for their improvised funeral after the French finally backed off. I wasn't really friends with him, but Alex was the one who knew how to make a good cup of coffee from GI foodstuffs. I already miss his wild stories.",
+        "categories": [
+            "field journal",
+            "tragedy"
+        ],
+        "date": "January 10, 2062"
+    },
+    {
+        "title": "Jack B.'s Log, Entry #3",
+        "content": "They're growing more and more aggressive. With the Belgians' airpower, French tanks rolled over the mountains and into nearby Italian villages. To think that only a week ago, the Italians were on the offensive along the coastline. They've since pulled back to reinforce primary fallback positions. The radio one of the other soldiers brought with her was relaying news of the French and Spanish navies suffering heavy losses after a major battle a few miles out from Portugal. At least we won't have to be dealing with as many enemy ships in the future.",
+        "categories": [
+            "field journal"
+        ],
+        "date": "January 17, 2062"
+    }
+]
