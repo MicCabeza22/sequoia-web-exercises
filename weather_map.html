@@ -39,7 +39,8 @@
                     var forecastCondition = "";
 
                     for (var i = 0; i < 3; i++) {
-                        forecastCondition += "<tr><td>" + forecast.list[i].main.temp_max + "°F / " + forecast.list[i].main.temp_min + "°F" + "</td></tr>";
+                        forecastCondition += "<tr><td>" + forecast.list[i].main.temp_max + "°F / "
+                            + forecast.list[i].main.temp_min + "°F" + "</td></tr>";
                         forecastCondition += "<tr><td>" + "Clouds: " + forecast.list[i].weather[0].main + "</td></tr>";
                         forecastCondition += "<tr><td>" + "Humidity: " + forecast.list[i].main.humidity + "</td></tr>";
                         forecastCondition += "<tr><td>" + "Wind: " + forecast.list[i].wind.speed + "</td></tr>";
