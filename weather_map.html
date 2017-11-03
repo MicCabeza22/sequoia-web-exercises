@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Weather Map Project</title>
+    </head>
+    <body>
+        <h1>Weather Application</h1>
+        <table id="weather">
+            <thead>
+                <tr>
+                    <th id="city"></th>
+                </tr>
+            </thead>
+            <tbody id="insertForecast"></tbody>
+        </table>
+
+        <script src="js/jquery-2.2.4.js"></script>
+        <script>
+            (function () {
+                "use strict";
+
+                $.get("http://api.openweathermap.org/data/2.5/weather", {
+                    APPID: "e1977a93d6a78467dad367b371db52fa",
+                    q:     "San Antonio, TX",
+                    units: "imperial"
+                })
+                .fail(function (error) {
+                    console.log("Error: " + error);
+                })
+                .done(function (data) {
+                    console.log(data);
+                    addForecast(data);
+                });
+
+                function addForecast(forecast) {
+                    var forecastCondition = "";
+
+                    forecastCondition += "<tr><td>" + forecast.main.temp_max + "°F / " + forecast.main.temp_min + "°F" + "</td></tr>";
+                    forecastCondition += "<tr><td>" + "Clouds: " + forecast.weather[0].main + "</td></tr>";
+                    forecastCondition += "<tr><td>" + "Humidity: " + forecast.main.humidity + "</td></tr>";
+                    forecastCondition += "<tr><td>" + "Wind: " + forecast.wind.speed + "</td></tr>";
+                    forecastCondition += "<tr><td>" + "Pressure: " + forecast.main.pressure + "</td></tr>";
+
+                    $("#city").append(forecast.name);
+                    $("#insertForecast").append(forecastCondition);
+                }
+            })();
+        </script>
+    </body>
 </html>
