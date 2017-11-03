@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ajax Bonus</title>
+    </head>
+    <body>
+        <div class="joke"></div>
+        <div class="quote"></div>
+
+        <button type="button" id="joke">Random Joke</button>
+        <button type="button" id="quote">Random Quote</button>
+        
+        <script src="js/jquery-2.2.4.js"></script>
+        <script>
+            (function () {
+                "use strict";
+                
+                $(document).ready(function () {
+                    $("#joke").click(function () {
+                        alert("Click!");
+                        $.get("http://api.icndb.com/jokes/random").fail(function () {
+                            alert("Something broke! I'll fix it!");
+                        }).done(function (data) {
+                            $(".joke").append("<p>" + data.value.joke + "</p>");
+                        });
+                    });
+
+                    $("#quote").click(function () {
+                        alert("Other click!");
+                        $.get("http://quotes.stormconsultancy.co.uk/random.json").fail(function () {
+                            alert("Uh oh! Something went wrong!");
+                        }).done(function (data) {
+                            $(".quote").append("<p>" + data.quote + " -" + data.author + "</p>");
+                        });
+                    });
+                });
+            })();
+        </script>
+    </body>
+</html>
