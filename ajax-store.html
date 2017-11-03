@@ -36,7 +36,9 @@
                 // TODO: Create an ajax GET request for /data/inventory.json
 
                 $(document).ready(function () {
-                    $.get("./data/inventory.json").done(function (data) {
+                    $.get("./data/inventory.json").fail(function (status) {
+                        alert("Error loading the page. Status: " + status + "Please try again.");
+                    }).done(function (data) {
                         //  Add product data to the product table
                         data.forEach(function (data) {
                             $("#insertProducts")
@@ -59,6 +61,7 @@
                     //             its contents and fields
                     //       HINT: You will want to target #insertProducts for your new HTML elements
                 });
+                //  NEVER FORGET .fail() !!
             })();
         </script>
     </body>
