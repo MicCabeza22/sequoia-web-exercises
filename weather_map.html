@@ -20,21 +20,43 @@
                 border: 1px solid #a9a9a9;
                 background-color: #d3d3d3;
             }
+            .form-control {
+                width: 12.5%;
+                float: left;
+                margin-right: 10px;
+            }
             .center {
                 text-align: center;
+            }
+            #map-canvas {
+                width: 100%;
+                height: 641px;
+                margin-top: 15px;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <h1>Weather Application</h1>
+
+            <form>
+                <div class="form-group">
+                    <h3>Search the world for a location:</h3>
+                    <input type="text" name="latitude" class="form-control" id="latitude" placeholder="Enter latitude">
+                    <input type="text" name="longitude" class="form-control" id="longitude"
+                           placeholder="Enter longitude">
+                    <button type="submit" class="btn btn-default" id="search">Search</button>
+                </div>
+            </form>
+
             <h2 id="city"></h2>
 
-            <div class="row" id="insertForecast">
-            </div>
+            <div class="row" id="insertForecast"></div>
+            <div id="map-canvas"></div>
         </div>
 
         <script src="js/jquery-2.2.4.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATZB7y9Bn1SE3GzcKEaxdSdRyngVeD9a0"></script>
         <script>
             (function () {
                 "use strict";
@@ -101,6 +123,24 @@
 
                         $("#city").append(forecast.city.name);
                         $("#insertForecast").append(forecastCondition);
+                    }
+
+                    var mapOptions = {
+                        zoom: 19,
+                        center: {
+                            lat:  29.426791,
+                            lng: -98.489602
+                        }
+                    };
+                    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+                    function searchMap(lat, lng) {
+                        if (lat < -90 || lat > 90) {
+                            alert("Please enter a latitude between -90 and 90.");
+                        }
+                        if (lng < -180 || lng > 180) {
+                            alert("Please enter a longitude between -180 and 180.");
+                        }
                     }
                 });
             })();
