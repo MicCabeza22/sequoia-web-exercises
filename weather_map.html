@@ -3,53 +3,60 @@
     <head>
         <meta charset="UTF-8">
         <title>Weather Map Project</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+              integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+              crossorigin="anonymous">
     </head>
     <body>
         <h1>Weather Application</h1>
-        <table id="weather">
-            <thead>
-                <tr>
-                    <th id="city"></th>
-                </tr>
-            </thead>
-            <tbody id="insertForecast"></tbody>
-        </table>
+        <h2 id="city"></h2>
+
+        <div class="container">
+            <div class="row" id="insertForecast">
+            </div>
+        </div>
 
         <script src="js/jquery-2.2.4.js"></script>
         <script>
             (function () {
                 "use strict";
 
-                $.get("http://api.openweathermap.org/data/2.5/forecast", {
-                    APPID: "e1977a93d6a78467dad367b371db52fa",
-                    q:     "San Antonio, TX",
-                    units: "imperial"
-                })
-                .fail(function (status, error) {
-                    alert("Oop! Somethin' is broke! Please consult the console for details.");
-                    console.log("Status: " + status);
-                    console.log("Error: " + error);
-                })
-                .done(function (data) {
-                    console.log(data);
-                    addForecast(data);
-                });
+                $(document).ready(function () {
+                    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+                        APPID: "e1977a93d6a78467dad367b371db52fa",
+                        q:     "San Antonio, TX",
+                        units: "imperial"
+                    })
+                    .fail(function (status, error) {
+                        alert("Oop! Somethin' is broke! Please consult the console for details.");
+                        console.log("Status: " + status);
+                        console.log("Error: " + error);
+                    })
+                    .done(function (data) {
+                        console.log(data);
+                        addForecast(data);
+                    });
 
-                function addForecast(forecast) {
-                    var forecastCondition = "";
+                    function addForecast(forecast) {
+                        var forecastCondition = "";
 
-                    for (var i = 0; i < 3; i++) {
-                        forecastCondition += "<tr><td>" + forecast.list[i].main.temp_max + "°F / "
-                            + forecast.list[i].main.temp_min + "°F" + "</td></tr>";
-                        forecastCondition += "<tr><td>" + "Clouds: " + forecast.list[i].weather[0].main + "</td></tr>";
-                        forecastCondition += "<tr><td>" + "Humidity: " + forecast.list[i].main.humidity + "</td></tr>";
-                        forecastCondition += "<tr><td>" + "Wind: " + forecast.list[i].wind.speed + "</td></tr>";
-                        forecastCondition += "<tr><td>" + "Pressure: " + forecast.list[i].main.pressure + "</td></tr>";
+                        for (var i = 0; i < 3; i++) {
+                            forecastCondition += "<div class='col-xs-4 col-md-4'>";
+                            forecastCondition += "<div class='row'>" + forecast.list[i].main.temp_max + "°F / "
+                                + forecast.list[i].main.temp_min + "°F" + "</div>";
+                            forecastCondition += "<div class='row'>" + "Clouds: " + forecast.list[i].weather[0].main
+                                + "</div>";
+                            forecastCondition += "<div class='row'>" + "Humidity: " + forecast.list[i].main.humidity
+                                + "</div>";
+                            forecastCondition += "<div class='row'>" + "Pressure: " + forecast.list[i].main.pressure
+                                + "</div>";
+                            forecastCondition += "</div>";
+                        }
+
+                        $("#city").append(forecast.city.name);
+                        $("#insertForecast").append(forecastCondition);
                     }
-
-                    $("#city").append(forecast.name);
-                    $("#insertForecast").append(forecastCondition);
-                }
+                });
             })();
         </script>
     </body>
