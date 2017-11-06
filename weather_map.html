@@ -6,12 +6,30 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
               integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
               crossorigin="anonymous">
+        <style>
+            body {
+                background-color: #87ceeb;
+            }
+            h2 {
+                margin-left: -15px;
+            }
+            span {
+                font-weight: bold;
+            }
+            .col-xs-4.col-md-4{
+                border: 1px solid #a9a9a9;
+                background-color: #d3d3d3;
+            }
+            .center {
+                text-align: center;
+            }
+        </style>
     </head>
     <body>
-        <h1>Weather Application</h1>
-        <h2 id="city"></h2>
-
         <div class="container">
+            <h1>Weather Application</h1>
+            <h2 id="city"></h2>
+
             <div class="row" id="insertForecast">
             </div>
         </div>
@@ -40,15 +58,38 @@
                     function addForecast(forecast) {
                         var forecastCondition = "";
 
-                        for (var i = 0; i < 3; i++) {
+                        for (var i = 0; i < 24; i += 8) {
+                            var tempMax = Math.round(forecast.list[i].main.temp_max);
+                            var tempMin = Math.round(forecast.list[i].main.temp_min);
+                            var iconCode = forecast.list[i].weather[0].icon;
+                            var iconUrl = "http://openweathermap.org/img/w/"
+                                + iconCode
+                                + ".png";
+                            var clouds = forecast.list[i].weather[0].description;
+                            var humidity = forecast.list[i].main.humidity;
+                            var pressure = forecast.list[i].main.pressure;
+
                             forecastCondition += "<div class='col-xs-4 col-md-4'>";
-                            forecastCondition += "<div class='row'>" + forecast.list[i].main.temp_max + "°F / "
-                                + forecast.list[i].main.temp_min + "°F" + "</div>";
-                            forecastCondition += "<div class='row'>" + "Clouds: " + forecast.list[i].weather[0].main
+                            forecastCondition += "<div class='row center'><h4>"
+                                + tempMax
+                                + "°F / "
+                                + tempMin
+                                + "°F"
+                                + "</h4></div>";
+                            forecastCondition += "<div class='row center icon'>"
+                                + "<img src='" + iconUrl + "'>"
                                 + "</div>";
-                            forecastCondition += "<div class='row'>" + "Humidity: " + forecast.list[i].main.humidity
+                            forecastCondition += "<div class='row center'>"
+                                + "<span>Clouds: </span>"
+                                + clouds
                                 + "</div>";
-                            forecastCondition += "<div class='row'>" + "Pressure: " + forecast.list[i].main.pressure
+                            forecastCondition += "<div class='row center'>"
+                                + "<span>Humidity: </span>"
+                                + humidity
+                                + "</div>";
+                            forecastCondition += "<div class='row center'>"
+                                + "<span>Pressure: </span>"
+                                + pressure
                                 + "</div>";
                             forecastCondition += "</div>";
                         }
