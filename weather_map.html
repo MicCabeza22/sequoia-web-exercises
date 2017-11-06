@@ -67,6 +67,7 @@
                                 + ".png";
                             var clouds = forecast.list[i].weather[0].description;
                             var humidity = forecast.list[i].main.humidity;
+                            var wind = forecast.list[i].wind.speed;
                             var pressure = forecast.list[i].main.pressure;
 
                             forecastCondition += "<div class='col-xs-4 col-md-4'>";
@@ -86,6 +87,10 @@
                             forecastCondition += "<div class='row center'>"
                                 + "<span>Humidity: </span>"
                                 + humidity
+                                + "</div>";
+                            forecastCondition += "<div class='row center'>"
+                                + "<span>Wind: </span>"
+                                + wind
                                 + "</div>";
                             forecastCondition += "<div class='row center'>"
                                 + "<span>Pressure: </span>"
