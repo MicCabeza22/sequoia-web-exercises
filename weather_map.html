@@ -45,7 +45,7 @@
                     <input type="text" name="latitude" class="form-control" id="latitude" placeholder="Enter latitude">
                     <input type="text" name="longitude" class="form-control" id="longitude"
                            placeholder="Enter longitude">
-                    <button type="submit" class="btn btn-default" id="search">Search</button>
+                    <button type="button" class="btn btn-default" id="search">Search</button>
                 </div>
             </form>
 
@@ -133,15 +133,37 @@
                         }
                     };
                     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+                    var geocoder = new google.maps.Geocoder();
 
-                    function searchMap(lat, lng) {
-                        if (lat < -90 || lat > 90) {
-                            alert("Please enter a latitude between -90 and 90.");
+                    geocoder.geocode({"location": latlng}, function(results, status) {
+                        if (status == google.maps.GeocoderStatus.OK) {
+                            map.setCenter(results[0].geometry.location);
+                        } else {
+                            alert("Geocoding was not successful - STATUS: " + status)
                         }
-                        if (lng < -180 || lng > 180) {
-                            alert("Please enter a longitude between -180 and 180.");
-                        }
-                    }
+                    });
+
+//                    function searchMap(lat, lon) {
+//                        while (lat < -90 || lat > 90) {
+//                            alert("Please enter a latitude between -90 and 90.");
+//
+//                            if (-90 <= lat <= 90) {
+//                                break;
+//                            }
+//                        }
+//
+//                        while (lon < -180 || lon > 180) {
+//                            alert("Please enter a longitude between -180 and 180.");
+//
+//                            if (-180 <= lon <= 180) {
+//                                break;
+//                            }
+//                        }
+//                    }
+//
+//                    $("#search").click(function () {
+//                        console.log(searchMap(inputLat, inputLng));
+//                    });
                 });
             })();
         </script>
