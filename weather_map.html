@@ -21,7 +21,7 @@
                 background-color: #d3d3d3;
             }
             .form-control {
-                width: 12.5%;
+                width: 13%;
                 float: left;
                 margin-right: 10px;
             }
@@ -62,20 +62,23 @@
                 "use strict";
 
                 $(document).ready(function () {
-                    $.get("http://api.openweathermap.org/data/2.5/forecast", {
-                        APPID: "e1977a93d6a78467dad367b371db52fa",
-                        q:     "San Antonio, TX",
-                        units: "imperial"
-                    })
-                    .fail(function (status, error) {
-                        alert("Oop! Somethin' is broke! Please consult the console for details.");
-                        console.log("Status: " + status);
-                        console.log("Error: " + error);
-                    })
-                    .done(function (data) {
-                        console.log(data);
-                        addForecast(data);
-                    });
+                    function getWeather(lat, lon) {
+                        $.get("http://api.openweathermap.org/data/2.5/forecast", {
+                            APPID: "e1977a93d6a78467dad367b371db52fa",
+                            lat: lat,
+                            lon: lon,
+                            units: "imperial"
+                        })
+                        .fail(function (status, error) {
+                                alert("Oop! Somethin' is broke! Please consult the console for details.");
+                                console.log("Status: " + status);
+                                console.log("Error: " + error);
+                        })
+                        .done(function (data) {
+                                console.log(data);
+                                addForecast(data);
+                        });
+                    }
 
                     function addForecast(forecast) {
                         var forecastCondition = "";
@@ -121,8 +124,8 @@
                             forecastCondition += "</div>";
                         }
 
-                        $("#city").append(forecast.city.name);
-                        $("#insertForecast").append(forecastCondition);
+                        $("#city").html(forecast.city.name);
+                        $("#insertForecast").html(forecastCondition);
                     }
 
                     var mapOptions = {
@@ -135,35 +138,29 @@
                     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
                     var geocoder = new google.maps.Geocoder();
 
-                    geocoder.geocode({"location": latlng}, function(results, status) {
-                        if (status == google.maps.GeocoderStatus.OK) {
-                            map.setCenter(results[0].geometry.location);
-                        } else {
-                            alert("Geocoding was not successful - STATUS: " + status)
-                        }
+                    document.getElementById("search").addEventListener("click", function () {
+                        var inputLat = document.getElementById("latitude").value;
+                        var inputLon = document.getElementById("longitude").value;
+
+                        geocodeLatLng(geocoder, map, inputLat, inputLon);
+                        getWeather(inputLat, inputLon);
                     });
 
-//                    function searchMap(lat, lon) {
-//                        while (lat < -90 || lat > 90) {
-//                            alert("Please enter a latitude between -90 and 90.");
-//
-//                            if (-90 <= lat <= 90) {
-//                                break;
-//                            }
-//                        }
-//
-//                        while (lon < -180 || lon > 180) {
-//                            alert("Please enter a longitude between -180 and 180.");
-//
-//                            if (-180 <= lon <= 180) {
-//                                break;
-//                            }
-//                        }
-//                    }
-//
-//                    $("#search").click(function () {
-//                        console.log(searchMap(inputLat, inputLng));
-//                    });
+                    function geocodeLatLng(geocoder, map, lat, lon) {
+                        var latlng = {lat: parseFloat(lat), lng: parseFloat(lon)};
+                        geocoder.geocode({"location": latlng}, function(results, status) {
+                            if (status === "OK") {
+                                if (results[0]) {
+                                    map.setZoom(11);
+                                    map.setCenter(results[0].geometry.location);
+                                } else {
+                                    alert("No results found");
+                                }
+                            } else {
+                                alert("Geocoder failed due to: " + status);
+                            }
+                        });
+                    }
                 });
             })();
         </script>
